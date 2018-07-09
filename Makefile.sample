@@ -1,0 +1,42 @@
+##
+## -------------------------------------------------------
+## #	Setup
+## -------------------------------------------------------
+##
+update: ## Update the dev and deploy environment
+	@cd $(DEV_DIR) && git pull origin master
+	@echo "\n" && $(DEV_DIR)/init.sh $(PROJECT_NAME)
+
+##
+## -------------------------------------------------------
+## #	Docker
+## -------------------------------------------------------
+##
+start: ## Start the docker containers
+	@cd $(DEV_DIR)/docker/tasks && ./start.sh
+stop: ## Stop the Docker containers
+	@cd $(DEV_DIR)/docker/tasks && ./stop.sh
+kill: ## Kill the Docker containers
+	@cd $(DEV_DIR)/docker/tasks && ./kill.sh
+shell: ## SSH into the wordpress container
+	@cd $(DEV_DIR)/docker/tasks && ./shell.sh
+db-import: ## Import the database 
+	@cd $(DEV_DIR)/docker/tasks && ./db_reset.sh $(file)
+db-dump: ## Export the database
+	@cd $(DEV_DIR)/docker/tasks && ./db_dump.sh
+
+##
+## -------------------------------------------------------
+## #	Capistrano
+## -------------------------------------------------------
+##
+deploy: ## Deploy to server
+	@cd $(DEV_DIR)/cap && bundle exec cap $(to) deploy
+
+
+.DEFAULT_GOAL := help
+help:
+	@grep -E '(^[a-zA-Z_-]+:.*?##.*$$)|(^##)' $(MAKEFILE_LIST) \
+		| awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}' \
+		| sed -e 's/\[32m##/[33m/'
+.PHONY: help
