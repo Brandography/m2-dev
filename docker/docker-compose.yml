@@ -37,7 +37,8 @@ services:
       - magento-network
 
   magento:
-    image: rafaelcgstz/magento2
+    # image: rafaelcgstz/magento2
+    build: .
     ports:
       - 127.0.0.1:80:80
     volumes:
