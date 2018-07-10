@@ -9,7 +9,6 @@ ENV XDEBUG_PORT 9000
 RUN apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 	software-properties-common \
-	python-software-properties \
 	&& apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y \
 	libfreetype6-dev \
@@ -17,7 +16,6 @@ RUN apt-get update \
   	libssl-dev \
 	libjpeg62-turbo-dev \
 	libmcrypt-dev \
-	libpng12-dev \
 	libedit-dev \
 	libedit2 \
 	libxslt1-dev \
@@ -34,6 +32,7 @@ RUN apt-get update \
 	tar \
 	cron \
 	bash-completion \
+    gnupg \
 	&& apt-get clean
 
 # Install Magento Dependencies
@@ -50,7 +49,7 @@ RUN docker-php-ext-configure \
   	pdo_mysql \
   	soap \
   	xsl \
-  	zip
+  	zip 
 
 # Install oAuth
 
