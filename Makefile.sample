@@ -1,16 +1,18 @@
+PROJECT_NAME=m2
+DEV_DIR=./dev
 ##
-## -------------------------------------------------------
-## #	Setup
-## -------------------------------------------------------
+##-------------------------------------------------------
+###	Setup
+##-------------------------------------------------------
 ##
 update: ## Update the dev and deploy environment
 	@cd $(DEV_DIR) && git pull origin master
 	@echo "\n" && $(DEV_DIR)/init.sh $(PROJECT_NAME)
 
 ##
-## -------------------------------------------------------
-## #	Docker
-## -------------------------------------------------------
+##-------------------------------------------------------
+###	Docker
+##-------------------------------------------------------
 ##
 start: ## Start the docker containers
 	@cd $(DEV_DIR)/docker/tasks && ./start.sh
@@ -26,9 +28,9 @@ db-dump: ## Export the database
 	@cd $(DEV_DIR)/docker/tasks && ./db_dump.sh
 
 ##
-## -------------------------------------------------------
-## #	Magento
-## -------------------------------------------------------
+##-------------------------------------------------------
+###	Magento
+##-------------------------------------------------------
 ##
 n98: ## n98-magerun commands
 	@cd $(DEV_DIR)/tasks && ./n98.sh $(t)
@@ -44,9 +46,9 @@ xdebug: ## xdebug commands
 
 
 ##
-## -------------------------------------------------------
-## #	Capistrano
-## -------------------------------------------------------
+##-------------------------------------------------------
+###	Capistrano
+##-------------------------------------------------------
 ##
 deploy: ## Deploy to server
 	@cd $(DEV_DIR)/cap && bundle exec cap $(to) deploy
@@ -57,9 +59,9 @@ deploy: ## Deploy to server
 ##
 ##    Access your new links:
 ##
-##    🌎      Web server:    http://localhost/
+##    🌎     Web server:    http://localhost/
 ##    🛠️      PHPMyAdmin:    http://localhost:8080
-##    📧      Mailhog:       http://localhost:8025
+##    📧     Mailhog:       http://localhost:8025
 ##
 ##===================== 🔗 Links 🔗 ===================
 ##
@@ -67,6 +69,6 @@ deploy: ## Deploy to server
 .DEFAULT_GOAL := help
 help:
 	@grep -E '(^[a-zA-Z0-9_-]+:.*?##.*$$)|(^##)' $(MAKEFILE_LIST) \
-		| awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}' \
+		| awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[32m%-30s\033[0m %s\n", $$1, $$2}' \
 		| sed -e 's/\[32m##/[33m/'
 .PHONY: help

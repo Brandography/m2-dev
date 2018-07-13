@@ -1,5 +1,4 @@
 # Magento 2 DEV and DEPLOY
----
 ## Setup
 ### Install
 Install this environment in the root dir of your project as a [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules). You can name the submodule dir whatever you like.
@@ -14,7 +13,6 @@ git submodule add git@github.com:danhort/m2-dev.git <submodule dir>
 ```
 make update
 ```
----
 ### Help
 ```
 make help
@@ -54,13 +52,12 @@ Enable/Disable xdebug.
 ```
 make xdebug
 ```
----
 ## Deploy
 ```
 make deploy to=<production/staging>
 ```
 ## Links
-===================== 🔗 Links 🔗 ===================
+===================== 🔗 Links 🔗 =====================
 
     Access your new links:
 
@@ -68,4 +65,4 @@ make deploy to=<production/staging>
     🛠️      PHPMyAdmin:    http://localhost:8080
     📧      Mailhog:       http://localhost:8025
 
-===================== 🔗 Links 🔗 ===================
+===================== 🔗 Links 🔗 =====================
