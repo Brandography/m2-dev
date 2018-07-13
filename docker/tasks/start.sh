@@ -11,12 +11,13 @@ if [ -z "$PROJECT_NAME" ]; then
 else
     docker-compose -p $PROJECT_NAME up -d
     echo "
-    ===================== 🚀 Done 🚀 ===================
+    ===================== 🔗 Links 🔗 ===================
 
         Access your new links:
 
-        🌎  Web server: http://localhost/
-        ⚙️   PHPMyAdmin: http://localhost:8080
+        🌎      Web server:    http://localhost/
+        🛠️      PHPMyAdmin:    http://localhost:8080
+        📧      Mailhog:       http://localhost:8025
 
-    ===================== 🚀 Done 🚀 ==================="
+    ===================== 🔗 Links 🔗 ==================="
 fi

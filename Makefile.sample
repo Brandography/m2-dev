@@ -52,6 +52,18 @@ deploy: ## Deploy to server
 	@cd $(DEV_DIR)/cap && bundle exec cap $(to) deploy
 
 
+##
+##===================== 🔗 Links 🔗 ===================
+##
+##    Access your new links:
+##
+##    🌎      Web server:    http://localhost/
+##    🛠️      PHPMyAdmin:    http://localhost:8080
+##    📧      Mailhog:       http://localhost:8025
+##
+##===================== 🔗 Links 🔗 ===================
+##
+
 .DEFAULT_GOAL := help
 help:
 	@grep -E '(^[a-zA-Z0-9_-]+:.*?##.*$$)|(^##)' $(MAKEFILE_LIST) \

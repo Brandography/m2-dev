@@ -15,6 +15,10 @@ git submodule add git@github.com:danhort/m2-dev.git <submodule dir>
 make update
 ```
 ---
+### Help
+```
+make help
+```
 ## Usage
 ### Docker
 Start Docker containers.
@@ -55,3 +59,13 @@ make xdebug
 ```
 make deploy to=<production/staging>
 ```
+## Links
+===================== 🔗 Links 🔗 ===================
+
+    Access your new links:
+
+    🌎      Web server:    http://localhost/
+    🛠️      PHPMyAdmin:    http://localhost:8080
+    📧      Mailhog:       http://localhost:8025
+
+===================== 🔗 Links 🔗 ===================
