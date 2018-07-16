@@ -1,25 +1,21 @@
 PROJECT_NAME=m2
 DEV_DIR=./dev
 ##
-##-------------------------------------------------------
-###	Setup
-##-------------------------------------------------------
+##=====================	Setup =====================
 ##
 update: ## Update the dev and deploy environment
 	@cd $(DEV_DIR) && git pull origin master
 	@echo "\n" && $(DEV_DIR)/init.sh $(PROJECT_NAME)
 
 ##
-##-------------------------------------------------------
-###	Docker
-##-------------------------------------------------------
+##===================== Docker =====================
 ##
 start: ## Start the docker containers
 	@cd $(DEV_DIR)/docker/tasks && ./start.sh
 stop: ## Stop the Docker containers
 	@cd $(DEV_DIR)/docker/tasks && ./stop.sh
 kill: ## Kill the Docker containers
-	@cd $(DEV_DIR)/docker/tasks && ./kill.sh
+	@cd $(DEV_DIR)/docker/tasks && ./kill.sh $(user)
 shell: ## SSH into the wordpress container
 	@cd $(DEV_DIR)/docker/tasks && ./shell.sh
 db-import: ## Import the database 
@@ -28,9 +24,7 @@ db-dump: ## Export the database
 	@cd $(DEV_DIR)/docker/tasks && ./db_dump.sh
 
 ##
-##-------------------------------------------------------
-###	Magento
-##-------------------------------------------------------
+##===================== Magento =====================
 ##
 n98: ## n98-magerun commands
 	@cd $(DEV_DIR)/tasks && ./n98.sh $(t)
@@ -46,16 +40,14 @@ xdebug: ## xdebug commands
 
 
 ##
-##-------------------------------------------------------
-###	Capistrano
-##-------------------------------------------------------
+##===================== Capistrano =====================
 ##
 deploy: ## Deploy to server
 	@cd $(DEV_DIR)/cap && bundle exec cap $(to) deploy
 
 
 ##
-##===================== 🔗 Links 🔗 ===================
+##===================== Links ##=====================
 ##
 ##    Access your new links:
 ##
@@ -63,7 +55,6 @@ deploy: ## Deploy to server
 ##    🛠️      PHPMyAdmin:    http://localhost:8080
 ##    📧     Mailhog:       http://localhost:8025
 ##
-##===================== 🔗 Links 🔗 ===================
 ##
 
 .DEFAULT_GOAL := help

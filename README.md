@@ -33,7 +33,7 @@ make kill
 ```
 SSH into Magento Docker container.
 ```
-make shell
+make shell [user=<user>]
 ```
 ### Magento
 Use n98-magerun cli.
@@ -57,12 +57,7 @@ make xdebug
 make deploy to=<production/staging>
 ```
 ## Links
-===================== 🔗 Links 🔗 =====================
-
-    Access your new links:
-
-    🌎      Web server:    http://localhost/
-    🛠️      PHPMyAdmin:    http://localhost:8080
-    📧      Mailhog:       http://localhost:8025
-
-===================== 🔗 Links 🔗 =====================
+Access your new links:
+🌎      Web server:    http://localhost/
+🛠️      PHPMyAdmin:    http://localhost:8080
+📧      Mailhog:       http://localhost:8025
