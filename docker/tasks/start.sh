@@ -9,18 +9,17 @@ if [ -z "$PROJECT_NAME" ]; then
     
     "
 else
-    occupied=false
     PORTS=(8080 3306 6379 1025 8025 80)
     for PORT in ${PORTS[*]}
     do
         nc -z 127.0.0.1 $PORT
         if [ $? = 0 ]; then
             echo "Port $PORT is already occupied! Please liberate."
-            $occupied=true
+            occupied=true
         fi
     done
 
-    if [ $occupied = false]; then
+    if [ "$occupied" != true ]; then
         docker-compose -p $PROJECT_NAME up -d
         echo "
         ===================== 🔗 Links 🔗 ===================
