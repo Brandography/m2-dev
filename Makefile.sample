@@ -1,14 +1,14 @@
 PROJECT_NAME=m2
 DEV_DIR=./dev
 ##
-##=====================	Setup =====================
+##=====================	   Setup    =====================
 ##
 update: ## Update the dev and deploy environment
 	@cd $(DEV_DIR) && git pull origin master
 	@echo "\n" && $(DEV_DIR)/init.sh $(PROJECT_NAME)
 
 ##
-##===================== Docker =====================
+##=====================   Docker    =====================
 ##
 start: ## Start the docker containers
 	@cd $(DEV_DIR)/docker/tasks && ./start.sh
@@ -19,12 +19,12 @@ kill: ## Kill the Docker containers
 shell: ## SSH into the wordpress container
 	@cd $(DEV_DIR)/docker/tasks && ./shell.sh
 db-import: ## Import the database 
-	@cd $(DEV_DIR)/docker/tasks && ./db_reset.sh $(file)
+	@cd $(DEV_DIR)/docker/tasks && ./db-import.sh $(file)
 db-dump: ## Export the database
-	@cd $(DEV_DIR)/docker/tasks && ./db_dump.sh
+	@cd $(DEV_DIR)/docker/tasks && ./db-export.sh
 
 ##
-##===================== Magento =====================
+##=====================   Magento   =====================
 ##
 n98: ## n98-magerun commands
 	@cd $(DEV_DIR)/tasks && ./n98.sh $(t)
@@ -47,13 +47,11 @@ deploy: ## Deploy to server
 
 
 ##
-##===================== Links ##=====================
+##=====================    Links    =====================
 ##
-##    Access your new links:
-##
-##    🌎     Web server:    http://localhost/
-##    🛠️      PHPMyAdmin:    http://localhost:8080
-##    📧     Mailhog:       http://localhost:8025
+##🌎     Web server:    http://localhost/
+##🛠️      PHPMyAdmin:    http://localhost:8080
+##📧     Mailhog:       http://localhost:8025
 ##
 ##
 

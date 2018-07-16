@@ -35,6 +35,14 @@ SSH into Magento Docker container.
 ```
 make shell [user=<user>]
 ```
+Import an compressed (gz) sql file to the Magento database. This file must be placed in the docker/mysqldump folder.
+```
+make db-import file=<file name>
+```
+Export a compressed database file into the docker/mysqldump folder.
+```
+make db-dump
+```
 ### Magento
 Use n98-magerun cli.
 ```
@@ -57,7 +65,8 @@ make xdebug
 make deploy to=<production/staging>
 ```
 ## Links
-Access your new links:
+```
 🌎      Web server:    http://localhost/
 🛠️      PHPMyAdmin:    http://localhost:8080
 📧      Mailhog:       http://localhost:8025
+```
