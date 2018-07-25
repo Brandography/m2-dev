@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.1] - 2018-07-25
+### Fixed
+- Removed unwanted variables in makefile sample
+
 ## 0.1.0 - 2018-07-25
 ### Added
 - Initial changelog input
@@ -14,4 +18,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated init script to include dev tag version + master for dev purposes
 
-[Unreleased]: https://github.com//brandography/m2-dev/compare/0.1.0...HEAD
+[Unreleased]: https://github.com//brandography/m2-dev/compare/0.1.1...HEAD
+[0.1.1]: https://github.com//brandography/m2-dev/compare/0.1.0...0.1.1
