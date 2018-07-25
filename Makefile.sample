@@ -4,12 +4,13 @@ DEV_DIR=./dev
 ##=====================	   Setup    =====================
 ##
 update: ## Update the dev and deploy environment
-	@cd $(DEV_DIR) && git pull origin master
-	@echo "\n" && $(DEV_DIR)/init.sh $(PROJECT_NAME)
+	@$(DEV_DIR)/init.sh $(PROJECT_NAME)
 
 ##
 ##=====================   Docker    =====================
 ##
+build: ## Build the docker containers
+	@cd $(DEV_DIR)/docker/tasks && ./build.sh
 start: ## Start the docker containers
 	@cd $(DEV_DIR)/docker/tasks && ./start.sh
 stop: ## Stop the Docker containers
