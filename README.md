@@ -3,7 +3,7 @@
 ### Install
 Install this environment in the root dir of your project as a [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules). You can name the submodule dir whatever you like.
 ```
-git submodule add git@github.com:danhort/m2-dev.git <submodule dir>
+git submodule add git@github.com:Brandography/m2-dev.git <submodule dir>
 ```
 ### Initialize
 ```
@@ -35,6 +35,10 @@ SSH into Magento Docker container.
 ```
 make shell [user=<user>]
 ```
+SSH into DB Docker container.
+```
+make db-shell
+```
 Import an compressed (gz) sql file to the Magento database. This file must be placed in the docker/mysqldump folder.
 ```
 make db-import file=<file name>
@@ -65,8 +69,6 @@ make xdebug
 make deploy to=<production/staging>
 ```
 ## Links
-```
-🌎      Web server:    http://localhost/
-🛠️      PHPMyAdmin:    http://localhost:8080
-📧      Mailhog:       http://localhost:8025
-```
+- 🌎 Web server:    http://localhost/
+- 🛠 ️PHPMyAdmin:    http://localhost:8080
+- 📧 Mailhog:       http://localhost:8025
