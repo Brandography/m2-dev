@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Script to ssh into db container
 - User option for ssh into magento container script
 - Added db-shell task to readme
+- Added domain name update to the db import script
 ### Changed
 - Updated git repo url in readme
 
