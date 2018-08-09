@@ -6,8 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.3.0] - 2018-08-09
+## [0.4.0] - 2018-08-09
+### Changed
+- Swapped capistrano for capistrano m2
+
+## [0.3.0] - 2018-07-26
 ### Added
+- db shell script
 - Script to ssh into db container
 - User option for ssh into magento container script
 - Added db-shell task to readme
@@ -15,7 +20,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Updated git repo url in readme
-- Swapped capistrano for capistrano m2
 
 ## [0.2.2] - 2018-07-25
 ### Added 
@@ -42,7 +46,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated init script to include dev tag version + master for dev purposes
 
-[Unreleased]: https://github.com//brandography/m2-dev/compare/0.3.0...HEAD
+[Unreleased]: https://github.com//brandography/m2-dev/compare/0.4.0...HEAD
+[0.4.0]: https://github.com//brandography/m2-dev/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com//brandography/m2-dev/compare/0.2.2...0.3.0
 [0.2.2]: https://github.com//brandography/m2-dev/compare/0.2.1...0.2.2
 [0.2.1]: https://github.com//brandography/m2-dev/compare/0.2.0...0.2.1
