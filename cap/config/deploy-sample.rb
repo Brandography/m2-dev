@@ -10,7 +10,12 @@ set :repo_tree, 'src/'
 # how many old releases de we want to keep
 set :keep_releases, 5
 
-# run scripts
-namespace :deploy do 
-  after :deploy, "permissions:set"
-end
+# set correct permissions for Nexcess
+set :magento_deploy_chmod_d, 711
+set :magento_deploy_chmod_f, 644
+
+# add wp folder to linked dirs
+append :linked_dirs, 'wp'
+
+set :magento_auth_public_key, '<you pulic_key here>'
+set :magento_auth_private_key, '<your private_key here'
