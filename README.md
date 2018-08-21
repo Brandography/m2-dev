@@ -64,6 +64,18 @@ Enable/Disable xdebug.
 ```
 make xdebug
 ```
+## Wordpress
+If you would like to install Wordpress a the Magento root for integrations like fishpig.
+```
+make get-wp
+```
+don't forget to add wordpress to the gitignore file.
+For the wp-config.php
+- DB_NAME: wordpress
+- DB_USER: wordpress
+- DB_PASSWORD: wordpress
+- DB_HOST: db
+
 ## Deploy
 ```
 make deploy to=<production/staging>
