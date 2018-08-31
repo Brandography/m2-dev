@@ -5,13 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- mysql 5.6 compatibility
 
 ## [0.5.1] - 2018-08-21
-## Changed
+### Changed
 - php.ini post_max_size for wp importer
 
 ## [0.5.0] - 2018-08-21
-### Changed 
+### Changed
 - Updated deploy scripts
 - mysqli support for wp integration
 
@@ -34,11 +36,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated git repo url in readme
 
 ## [0.2.2] - 2018-07-25
-### Added 
+### Added
 - Renamed conf dir
 
 ## [0.2.1] - 2018-07-25
-### Added 
+### Added
 - build script
 
 ## [0.2.0] - 2018-07-25
