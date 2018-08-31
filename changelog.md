@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - mysql 5.6 compatibility
+- added get-wp script link to Makefile
+- added install magento script
 
 ## [0.5.1] - 2018-08-21
 ### Changed
