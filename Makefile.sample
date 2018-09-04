@@ -40,10 +40,10 @@ xdebug: ## xdebug commands
 	@cd $(DEV_DIR)/tasks && ./xdebug.sh
 
 install-magento: ## Installs magento
-  @cd $(DEV_DIR)/tasks &&./get_magento.sh
+	@cd $(DEV_DIR)/tasks &&./get_magento.sh
 
 install-wp: ## Installs wordpress
-  @cd $(DEV_DIR)/tasks &&./get_wp.sh
+	@cd $(DEV_DIR)/tasks &&./get_wp.sh
 
 ##
 ##===================== Capistrano =====================
