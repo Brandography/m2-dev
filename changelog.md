@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.7.1] - 2018-09-04
+### Fixed
+- spaces to tabs for Makefile.sample
+
 ## [0.7.0] - 2018-09-04
 ### Changed
 - Increased max_allowed_packet to 500M for mysql
@@ -68,7 +72,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated init script to include dev tag version + master for dev purposes
 
-[Unreleased]: https://github.com//brandography/m2-dev/compare/0.7.0...HEAD
+[Unreleased]: https://github.com//brandography/m2-dev/compare/0.7.1...HEAD
+[0.7.1]: https://github.com//brandography/m2-dev/compare/0.7.0...0.7.1
 [0.7.0]: https://github.com//brandography/m2-dev/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com//brandography/m2-dev/compare/0.5.1...0.6.0
 [0.5.1]: https://github.com//brandography/m2-dev/compare/0.5.0...0.5.1
