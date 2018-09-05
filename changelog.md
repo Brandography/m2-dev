@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.0] - 2018-09-05
+### Changed
+- Moved to mysql v 5.6
+
 ## [0.7.1] - 2018-09-04
 ### Fixed
 - spaces to tabs for Makefile.sample
@@ -72,7 +76,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated init script to include dev tag version + master for dev purposes
 
-[Unreleased]: https://github.com//brandography/m2-dev/compare/0.7.1...HEAD
+[Unreleased]: https://github.com//brandography/m2-dev/compare/0.8.0...HEAD
+[0.8.0]: https://github.com//brandography/m2-dev/compare/0.7.1...0.8.0
 [0.7.1]: https://github.com//brandography/m2-dev/compare/0.7.0...0.7.1
 [0.7.0]: https://github.com//brandography/m2-dev/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com//brandography/m2-dev/compare/0.5.1...0.6.0
