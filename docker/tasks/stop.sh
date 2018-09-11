@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
-cd ../
-source ../../.env
-
-docker-compose -p $PROJECT_NAME stop
+PROJECT_NAME=$1
+docker-compose -p $1 stop

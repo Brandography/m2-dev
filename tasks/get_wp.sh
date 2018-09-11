@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-source ../../.env
+PROJECT_NAME=$1
 
 if [ -n "$(ls -A ../../wordpress 2>/dev/null)" ] 
-then
-    echo "Wordpress seems to be already imported!!"
+	then
+    	echo "Wordpress seems to be already imported!!"
 else
 	cd ../docker
 	docker-compose -p $PROJECT_NAME exec -T -u root db mysql -uroot -pmagento  --execute="create database if not exists wordpress;"

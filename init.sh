@@ -27,9 +27,9 @@ else
 
     echo "Initializing Project $1!"
 
-    cp .env.sample ../.env
-    sed -i "s/PROJECT_NAME=.*/PROJECT_NAME=$1/" ../.env
-	sed -i "s/DEV_VERSION=.*/DEV_VERSION=$LATEST_TAG/" ../.env
+	cp config.yml.sample ../config.yml
+	sed -i "s/PROJECT_NAME:.*/PROJECT_NAME: $1/" ../config.yml
+	sed -i "s/DEV_VERSION:.*/DEV_VERSION: $LATEST_TAG/" ../config.yml
 
     if [ ! -d "../src" ]; then
         echo "Creating src dir."

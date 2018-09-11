@@ -77,6 +77,8 @@ For the wp-config.php
 - DB_HOST: db
 
 ## Deploy
+Don't forget to fill in the config.yml file at the root of this project with the required information.
+
 ```
 make deploy to=<production/staging>
 ```

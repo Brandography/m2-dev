@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-source ../../.env
-cd ../docker
-
+PROJECT_NAME=$1
 docker-compose -p $PROJECT_NAME exec --user www-data magento install-magento2
 exit 0

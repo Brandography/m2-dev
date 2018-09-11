@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-cd ../
-source ../../.env
+PROJECT_NAME=$1
 
 if [ -z "$PROJECT_NAME" ]; then
     echo "

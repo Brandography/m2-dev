@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-cd ../
-source ../../.env
-if [ -z "$1" ]
+PROJECT_NAME=$1
+USER=$2
+
+if [ -z "$USER" ]
   then
     docker-compose -p $PROJECT_NAME exec --user www-data magento bash
 else
-    docker-compose -p $PROJECT_NAME exec --user $@ magento bash
+    docker-compose -p $PROJECT_NAME exec --user $USER magento bash
 fi

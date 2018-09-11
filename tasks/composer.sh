@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-source ../../.env
-cd ../docker
-
-docker-compose -p $PROJECT_NAME exec --user www-data magento composer $@
+PROJECT_NAME=$1
+TASK=$2
+docker-compose -p $PROJECT_NAME exec --user www-data magento composer $TASK
 exit 0

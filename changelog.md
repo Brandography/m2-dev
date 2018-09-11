@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- config.yml file to hold all project deploy and develop configuration files instead of using .env
 
 ## [0.8.0] - 2018-09-05
 ### Changed
