@@ -1,6 +1,14 @@
-append :linked_files, APP_CONFIG["PRODUCTION_LINKED_FILES"]
-append :linked_dirs, APP_CONFIG["PRODUCTION_LINKED_DIRS"]
+if defined? APP_CONFIG["production"]["linked_files"]
+    APP_CONFIG["production"]["linked_files"].each do |file|
+        append :linked_files, file
+    end
+end
+if defined? APP_CONFIG["production"]["linked_dirs"]
+    APP_CONFIG["production"]["linked_dirs"].each do |dir|
+        append :linked_dirs, dir
+    end
+end
 
-server APP_CONFIG["PRODUCTION_SERVER"], user: APP_CONFIG["PRODUCTION_USER"], roles: %w{app db web}
-set :deploy_to, APP_CONFIG["PRODUCTION_DEPLOY_TO"]
-set :branch, proc { `git rev-parse --abbrev-ref #{APP_CONFIG["PRODUCTION_BRANCH"]}`.chomp }
+server APP_CONFIG["production"]["server"], user: APP_CONFIG["production"]["user"], roles: %w{app db web}
+set :deploy_to, APP_CONFIG["production"]["deploy_path"]
+set :branch, proc { `git rev-parse --abbrev-ref #{APP_CONFIG["production"]["branch"]}`.chomp }

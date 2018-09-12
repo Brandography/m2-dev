@@ -9,14 +9,17 @@ else
 	if [ "$2" = "master" ]; then
 		git checkout master
 		git pull origin master
+		LATEST_TAG="master"
 	else
 		git fetch --tags
 		LATEST_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
 		echo "Updating to the latest version $LATEST_TAG"
 		git checkout $LATEST_TAG
 
-		if [ -f "../.env" ]; then
-			source ../.env
+		if [ -f "../config.yml" ]; then
+			DEV_VERSION=$(grep -A3 'dev_version:' ../config.yml | head -n1 | cut -c 18-)
+			PROJECT_NAME=$(grep -A3 'name:' ../config.yml | head -n1 | cut -c 11-)
+
 			if [ $DEV_VERSION = $LATEST_TAG ] && [ $PROJECT_NAME = $1 ]; then
 				echo "The dev & deploy environment is at the latest version $LATEST_TAG and the project name is the same."
 				echo "No need for an update."
@@ -27,9 +30,11 @@ else
 
     echo "Initializing Project $1!"
 
-	cp config.yml.sample ../config.yml
-	sed -i "s/PROJECT_NAME:.*/PROJECT_NAME: $1/" ../config.yml
-	sed -i "s/DEV_VERSION:.*/DEV_VERSION: $LATEST_TAG/" ../config.yml
+	if [ ! -f "../config.yml" ]; then
+		cp config.yml.sample ../config.yml
+	fi
+	sed -i "s/name:.*/name: $1/" ../config.yml
+	sed -i "s/dev_version:.*/dev_version: $LATEST_TAG/" ../config.yml
 
     if [ ! -d "../src" ]; then
         echo "Creating src dir."
