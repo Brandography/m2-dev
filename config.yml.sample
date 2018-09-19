@@ -6,18 +6,20 @@ production:
   server: <production server ip address>
   user: <production ssh deploy user name>
   branch: <git branch>
-  linked_files: 
+  deploy_path: <deploy path>
+  linked_files:
     - <file to be symlinked from the shared folder>
-  linked_dirs: 
+  linked_dirs:
     - <dir to be symlinked from the shared folder>
 staging:
   server: <staging server ip address>
   user: <staging ssh deploy user name>
   branch: <git branch>
-  linked_files: 
+  deploy_path: <deploy path>
+  linked_files:
     - <file to be symlinked from the shared folder>
-  linked_dirs: 
-    - <dir to be symlinked from the shared folder> 
-magento: 
+  linked_dirs:
+    - <dir to be symlinked from the shared folder>
+magento:
   auth_public_key: <magento auth public key>
   auth_private_key: <magento auth private key>

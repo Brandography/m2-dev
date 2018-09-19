@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.9.2] - 2018-09-19
+### Fixed
+- Missing deploy path in config file
+
 ## [0.9.1] - 2018-09-19
 ### Fixed
 - Added quotes around makfile bash parameters
@@ -85,6 +90,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated init script to include dev tag version + master for dev purposes
 
 [Unreleased]: https://github.com//brandography/m2-dev/compare/0.9.1...HEAD
+[0.9.2]: https://github.com//brandography/m2-dev/compare/0.9.1...0.9.2
 [0.9.1]: https://github.com//brandography/m2-dev/compare/0.9.0...0.9.1
 [0.9.0]: https://github.com//brandography/m2-dev/compare/0.8.0...0.9.0
 [0.8.0]: https://github.com//brandography/m2-dev/compare/0.7.1...0.8.0
