@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 PROJECT_NAME=$1
-
+cd ..
 if [ -z "$PROJECT_NAME" ]; then
     echo "
-    
+
     Please initialize your project by typing \"make init project-name=<project name>\"
-    
+
     "
 else
     PORTS=(8080 3306 6379 1025 8025 80)

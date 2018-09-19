@@ -2,54 +2,54 @@
 ##=====================	   Setup    =====================
 ##
 update: ## Update the dev and deploy environment
-	@$(DEV_DIR)/init.sh $(PROJECT_NAME)
+	@$(DEV_DIR)/init.sh "$(PROJECT_NAME)"
 
 ##
 ##=====================   Docker    =====================
 ##
 build: ## Build the docker containers
-	@cd $(DEV_DIR)/docker/tasks && ./build.sh $(PROJECT_NAME)
+	@cd $(DEV_DIR)/docker/tasks && ./build.sh "$(PROJECT_NAME)"
 start: ## Start the docker containers
-	@cd $(DEV_DIR)/docker/tasks && ./start.sh $(PROJECT_NAME)
+	@cd $(DEV_DIR)/docker/tasks && ./start.sh "$(PROJECT_NAME)"
 stop: ## Stop the Docker containers
-	@cd $(DEV_DIR)/docker/tasks && ./stop.sh $(PROJECT_NAME)
+	@cd $(DEV_DIR)/docker/tasks && ./stop.sh "$(PROJECT_NAME)"
 kill: ## Kill the Docker containers
-	@cd $(DEV_DIR)/docker/tasks && ./kill.sh $(PROJECT_NAME)
+	@cd $(DEV_DIR)/docker/tasks && ./kill.sh "$(PROJECT_NAME)"
 db-shell: ## SSH into the db container
-	@cd $(DEV_DIR)/docker/tasks && ./db-shell.sh $(PROJECT_NAME)
+	@cd $(DEV_DIR)/docker/tasks && ./db-shell.sh "$(PROJECT_NAME)"
 shell: ## SSH into the magento container
-	@cd $(DEV_DIR)/docker/tasks && ./shell.sh $(PROJECT_NAME) $(user) 
+	@cd $(DEV_DIR)/docker/tasks && ./shell.sh "$(PROJECT_NAME)" "$(user)"
 db-import: ## Import the database
-	@cd $(DEV_DIR)/docker/tasks && ./db-import.sh $(PROJECT_NAME) $(file)
+	@cd $(DEV_DIR)/docker/tasks && ./db-import.sh "$(PROJECT_NAME)" "$(file)"
 db-dump: ## Export the database
-	@cd $(DEV_DIR)/docker/tasks && ./db-export.sh $(PROJECT_NAME)
+	@cd $(DEV_DIR)/docker/tasks && ./db-export.sh "$(PROJECT_NAME)"
 
 ##
 ##=====================   Magento   =====================
 ##
 n98: ## n98-magerun commands
-	@cd $(DEV_DIR)/tasks && ./n98.sh $(PROJECT_NAME) $(t)
+	@cd $(DEV_DIR)/tasks && ./n98.sh "$(PROJECT_NAME)" "$(t)"
 
 composer: ## composer commands
-	@cd $(DEV_DIR)/tasks && ./composer.sh $(PROJECT_NAME) $(t)
+	@cd $(DEV_DIR)/tasks && ./composer.sh "$(PROJECT_NAME)" "$(t)"
 
 magento: ## magento commands
-	@cd $(DEV_DIR)/tasks && ./magento.sh $(PROJECT_NAME) $(t)
+	@cd $(DEV_DIR)/tasks && ./magento.sh "$(PROJECT_NAME)" "$(t)"
 
 xdebug: ## xdebug commands
-	@cd $(DEV_DIR)/tasks && ./xdebug.sh $(PROJECT_NAME)
+	@cd $(DEV_DIR)/tasks && ./xdebug.sh "$(PROJECT_NAME)"
 
 install-magento: ## Installs magento
-	@cd $(DEV_DIR)/tasks &&./get_magento.sh $(PROJECT_NAME)
+	@cd $(DEV_DIR)/tasks &&./get_magento.sh "$(PROJECT_NAME)"
 
 install-wp: ## Installs wordpress
-	@cd $(DEV_DIR)/tasks &&./get_wp.sh $(PROJECT_NAME)
+	@cd $(DEV_DIR)/tasks &&./get_wp.sh "$(PROJECT_NAME)"
 
 ##
 ##===================== Capistrano =====================
 ##
 deploy: ## Deploy to server
-	@cd $(DEV_DIR)/cap && bundle exec cap $(to) deploy
+	@cd $(DEV_DIR)/cap && bundle exec cap "$(to)" deploy
 
 
 ##

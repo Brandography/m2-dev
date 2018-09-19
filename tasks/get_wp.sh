@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 PROJECT_NAME=$1
 
-if [ -n "$(ls -A ../../wordpress 2>/dev/null)" ] 
+if [ -n "$(ls -A ../../wordpress 2>/dev/null)" ]
 	then
     	echo "Wordpress seems to be already imported!!"
 else
