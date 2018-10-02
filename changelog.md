@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.10.0] - 2018-10-02
+### Added
+- OPCache flushing during deploy
+
 ## [0.9.2] - 2018-09-19
 ### Fixed
 - Missing deploy path in config file
@@ -89,7 +93,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated init script to include dev tag version + master for dev purposes
 
-[Unreleased]: https://github.com//brandography/m2-dev/compare/0.9.1...HEAD
+[Unreleased]: https://github.com//brandography/m2-dev/compare/0.10.0...HEAD
+[0.10.0]: https://github.com//brandography/m2-dev/compare/0.9.2...0.10.0
 [0.9.2]: https://github.com//brandography/m2-dev/compare/0.9.1...0.9.2
 [0.9.1]: https://github.com//brandography/m2-dev/compare/0.9.0...0.9.1
 [0.9.0]: https://github.com//brandography/m2-dev/compare/0.8.0...0.9.0

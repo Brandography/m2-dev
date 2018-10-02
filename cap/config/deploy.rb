@@ -17,3 +17,7 @@ set :magento_deploy_chmod_f, 644
 
 set :magento_auth_public_key, APP_CONFIG["magento"]["auth_public_key"]
 set :magento_auth_private_key, APP_CONFIG["magento"]["auth_private_key"]
+
+namespace :deploy do
+  before 'deploy:symlink:release', "opcache:clear"
+end

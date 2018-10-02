@@ -7,4 +7,5 @@ if [ -z "$2" ];then
 else
 	zcat mysqldump/$FILE | docker-compose -p $PROJECT_NAME exec -T -u root db mysql -umagento -pmagento magento
 	docker-compose -p $PROJECT_NAME exec -T -u root db mysql -umagento -pmagento magento --execute="update core_config_data set value='http://localhost/' where path='web/unsecure/base_url';"
+    docker-compose -p $PROJECT_NAME exec -T -u root db mysql -umagento -pmagento magento --execute="update core_config_data set value='http://localhost/' where path='web/secure/base_url';"
 fi

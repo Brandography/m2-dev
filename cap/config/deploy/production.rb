@@ -1,3 +1,5 @@
+set :stage, 'production'
+
 if defined? APP_CONFIG["production"]["linked_files"]
     APP_CONFIG["production"]["linked_files"].each do |file|
         append :linked_files, file
