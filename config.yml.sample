@@ -4,6 +4,7 @@ project:
   git_repo: <git repo>
 production:
   server: <production server ip address>
+  url: <production url>
   user: <production ssh deploy user name>
   branch: <git branch>
   deploy_path: <deploy path>
@@ -13,6 +14,7 @@ production:
     - <dir to be symlinked from the shared folder>
 staging:
   server: <staging server ip address>
+  usl: <staging url>
   user: <staging ssh deploy user name>
   branch: <git branch>
   deploy_path: <deploy path>
