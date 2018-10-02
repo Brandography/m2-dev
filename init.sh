@@ -31,7 +31,10 @@ else
     echo "Initializing Project $1!"
 
 	if [ ! -f "../config.yml" ]; then
-		cp config.yml.sample ../config.yml
+		cp config-sample.yml ../config.yml
+	fi
+    if [ ! -f "../config-secret.yml" ]; then
+		cp config-secret-sample.yml ../config-secret.yml
 	fi
 	sed -i "s/name:.*/name: $1/" ../config.yml
 	sed -i "s/dev_version:.*/dev_version: $LATEST_TAG/" ../config.yml
@@ -40,6 +43,8 @@ else
         echo "Creating src dir."
         mkdir ../src
     fi
+
+    cp .gitignore-sample ../.gitignore
 
     cp Makefile.sample ../Makefile
     sed -i '1iDEV_DIR='$DEVDIR ../Makefile
