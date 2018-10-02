@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.11.1] - 2018-10-02
+### Fixed
+- typo in gitignore sample
+
 ## [0.11.0] - 2018-10-02
 ### Changed
 - Updated config samples
@@ -100,7 +104,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated init script to include dev tag version + master for dev purposes
 
-[Unreleased]: https://github.com//brandography/m2-dev/compare/0.11.0...HEAD
+[Unreleased]: https://github.com//brandography/m2-dev/compare/0.11.1...HEAD
+[0.11.1]: https://github.com//brandography/m2-dev/compare/0.11.0...0.11.1
 [0.11.0]: https://github.com//brandography/m2-dev/compare/0.10.0...0.11.0
 [0.10.0]: https://github.com//brandography/m2-dev/compare/0.9.2...0.10.0
 [0.9.2]: https://github.com//brandography/m2-dev/compare/0.9.1...0.9.2
