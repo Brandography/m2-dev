@@ -22,6 +22,3 @@ staging:
     - <file to be symlinked from the shared folder>
   linked_dirs:
     - <dir to be symlinked from the shared folder>
-magento:
-  auth_public_key: <magento auth public key>
-  auth_private_key: <magento auth private key>
