@@ -6,8 +6,8 @@ namespace :opcache do
     on roles (:all) do
       previous_release = "#{deploy_to}/current"
       file_name = SecureRandom.hex + ".php"
-      execute "cd #{previous_release} && echo '<?php opcache_reset();' > #{file_name}"
-      execute "wget -q --spider #{APP_CONFIG[fetch(:stage)]['url']}/#{file_name}"
+      execute "echo '<?php opcache_reset();' > #{previous_release}/#{file_name}"
+      execute "wget -q --spider #{APP_CONFIG[fetch(:stage)]['url']}/#{file_name}; echo $?"
       execute "rm #{previous_release}/#{file_name}"
       puts "Flushed OPCache"
     end
