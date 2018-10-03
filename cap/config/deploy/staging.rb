@@ -1,11 +1,11 @@
 set :stage, 'staging'
 
-if defined? APP_CONFIG["staging"]["linked_files"]
+if !APP_CONFIG["staging"]["linked_files"].nil?
     APP_CONFIG["staging"]["linked_files"].each do |file|
         append :linked_files, file
     end
 end
-if defined? APP_CONFIG["staging"]["linked_dirs"]
+if !APP_CONFIG["staging"]["linked_dirs"].nil?
     APP_CONFIG["staging"]["linked_dirs"].each do |dir|
         append :linked_dirs, dir
     end
