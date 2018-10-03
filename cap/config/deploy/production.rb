@@ -1,11 +1,11 @@
 set :stage, 'production'
 
-if defined? APP_CONFIG["production"]["linked_files"]
+if !APP_CONFIG["production"]["linked_files"].nil?
     APP_CONFIG["production"]["linked_files"].each do |file|
         append :linked_files, file
     end
 end
-if defined? APP_CONFIG["production"]["linked_dirs"]
+if !APP_CONFIG["production"]["linked_dirs"].nil?
     APP_CONFIG["production"]["linked_dirs"].each do |dir|
         append :linked_dirs, dir
     end
