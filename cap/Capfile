@@ -13,3 +13,4 @@ install_plugin Capistrano::SCM::Git
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
 
 APP_CONFIG = YAML.load_file(File.expand_path('../../../config.yml', __FILE__))
+SECRET_CONFIG = YAML.load_file(File.expand_path('../../../config-secret.yml', __FILE__))

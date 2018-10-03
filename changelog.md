@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.11.2] - 2018-10-03
+### Fixed
+- typo config-secret-sample.yml
+- Added yaml file load for secret config
+
 ## [0.11.1] - 2018-10-02
 ### Fixed
 - typo in gitignore sample
@@ -104,7 +109,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated init script to include dev tag version + master for dev purposes
 
-[Unreleased]: https://github.com//brandography/m2-dev/compare/0.11.1...HEAD
+[Unreleased]: https://github.com//brandography/m2-dev/compare/0.11.2...HEAD
+[0.11.2]: https://github.com//brandography/m2-dev/compare/0.11.1...0.11.2
 [0.11.1]: https://github.com//brandography/m2-dev/compare/0.11.0...0.11.1
 [0.11.0]: https://github.com//brandography/m2-dev/compare/0.10.0...0.11.0
 [0.10.0]: https://github.com//brandography/m2-dev/compare/0.9.2...0.10.0
