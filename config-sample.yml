@@ -14,7 +14,7 @@ production:
     - <dir to be symlinked from the shared folder>
 staging:
   server: <staging server ip address>
-  usl: <staging url>
+  url: <staging url>
   user: <staging ssh deploy user name>
   branch: <git branch>
   deploy_path: <deploy path>
