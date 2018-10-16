@@ -20,4 +20,5 @@ set :magento_auth_private_key, SECRET_CONFIG["magento"]["auth_private_key"]
 
 namespace :deploy do
   before 'deploy:symlink:release', "opcache:clear"
+  before 'deploy:symlink:release', "htaccess:set"
 end
