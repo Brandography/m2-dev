@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.13.1] - 2018-10-19
+### Fixed
+- Fixed redis container name in env.php.sample
+
 ## [0.13.0] - 2018-10-16
 ### Added
 - Rake task to override htaccess files
@@ -124,7 +128,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated init script to include dev tag version + master for dev purposes
 
-[Unreleased]: https://github.com//brandography/m2-dev/compare/0.13.0...HEAD
+[Unreleased]: https://github.com//brandography/m2-dev/compare/0.13.1...HEAD
+[0.13.1]: https://github.com//brandography/m2-dev/compare/0.13.0...0.13.1
 [0.13.0]: https://github.com//brandography/m2-dev/compare/0.12.0...0.13.0
 [0.12.0]: https://github.com//brandography/m2-dev/compare/0.11.3...0.12.0
 [0.11.3]: https://github.com//brandography/m2-dev/compare/0.11.2...0.11.3

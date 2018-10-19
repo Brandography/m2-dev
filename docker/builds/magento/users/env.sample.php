@@ -14,7 +14,7 @@ return array(
             'redis' =>
                 array(
 
-                    'host' => 'redis-session',
+                    'host' => 'redis',
                     'port' => '6379',
                     'password' => '',
                     'timeout' => '2.5',
