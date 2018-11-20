@@ -48,6 +48,10 @@ Export a compressed database file into the docker/mysqldump folder.
 make db-dump
 ```
 ### Magento
+Install Magento 2.x
+```
+make install-magento v=<magento version>
+```
 Use n98-magerun cli.
 ```
 make n98 t=<commands>
