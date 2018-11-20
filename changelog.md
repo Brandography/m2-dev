@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Version to magento install script
 
+### Changed
+- Updated php version from 7.0 to 7.2
+
 ## [0.13.1] - 2018-10-19
 ### Fixed
 - Fixed redis container name in env.php.sample

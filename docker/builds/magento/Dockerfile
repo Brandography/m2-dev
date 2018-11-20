@@ -1,4 +1,4 @@
-FROM php:7.0-apache
+FROM php:7.2-apache
 
 MAINTAINER Rafael Corrêa Gomes <rafaelcgstz@gmail.com>
 
@@ -45,13 +45,15 @@ RUN docker-php-ext-configure \
   	bcmath \
   	intl \
   	mbstring \
-  	mcrypt \
   	pdo_mysql \
   	soap \
   	xsl \
   	zip \
 	mysqli
-	
+
+RUN pecl install mcrypt-1.0.1 \
+    docker-php-ext-enable mcrypt
+
 RUN docker-php-ext-enable mysqli
 
 # Install oAuth
